@@ -1,4 +1,4 @@
-<ActionBar title="Prototype<Logo>">
+<ActionBar title="Explore">
   <ActionItem
     (tap)="onLouis()"
     ios.systemIcon="9"
@@ -17,12 +17,8 @@
   </ActionItem>
 </ActionBar>
 
-<GridLayout>
-  <ListView [items]="items">
-    <ng-template let-item="item">
-      <StackLayout [nsRouterLink]="['../item', item.id]">
-        <Label [text]="item.name"></Label>
-      </StackLayout>
-    </ng-template>
-  </ListView>
+
+<GridLayout class="page__content">
+  <Label class="page__content-icon far" text="&#xf1ea;"></Label>
+  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
 </GridLayout>

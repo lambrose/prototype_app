@@ -5,10 +5,15 @@ import { NativeScriptRouterModule, NSEmptyOutletComponent } from '@nativescript/
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/(homeTab:home/default//browseTab:browse/default//searchTab:search/default)',
+    redirectTo: '/(trendTab:trend/default//homeTab:home/default//profileTab:profile/default)',
     pathMatch: 'full',
   },
-
+  {
+    path: 'trend',
+    component: NSEmptyOutletComponent,
+    loadChildren: () => import('~/app/trend/trend.module').then((m) => m.TrendModule),
+    outlet: 'trendTab',
+  },
   {
     path: 'home',
     component: NSEmptyOutletComponent,
@@ -16,16 +21,10 @@ const routes: Routes = [
     outlet: 'homeTab',
   },
   {
-    path: 'browse',
+    path: 'profile',
     component: NSEmptyOutletComponent,
-    loadChildren: () => import('~/app/browse/browse.module').then((m) => m.BrowseModule),
-    outlet: 'browseTab',
-  },
-  {
-    path: 'search',
-    component: NSEmptyOutletComponent,
-    loadChildren: () => import('~/app/search/search.module').then((m) => m.SearchModule),
-    outlet: 'searchTab',
+    loadChildren: () => import('~/app/profile/profile.module').then((m) => m.ProfileModule),
+    outlet: 'profileTab',
   },
 ]
 
