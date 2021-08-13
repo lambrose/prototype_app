@@ -3,7 +3,7 @@ import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
 import { ProfileComponent } from './profile.component'
 
-const routes: Routes = [{ path: 'default', component: ProfileComponent }]
+const routes: Routes = [{ path: '', component: ProfileComponent }]
 
 @NgModule({
   imports: [NativeScriptRouterModule.forChild(routes)],

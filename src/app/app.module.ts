@@ -3,11 +3,12 @@ import { NativeScriptModule } from '@nativescript/angular'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
+import { AuthenticationComponent } from './authentication/authentication.component'
 
 @NgModule({
   bootstrap: [AppComponent],
   imports: [NativeScriptModule, AppRoutingModule],
-  declarations: [AppComponent],
+  declarations: [AppComponent, AuthenticationComponent],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}

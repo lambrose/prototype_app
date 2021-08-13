@@ -4,7 +4,7 @@ import { NativeScriptRouterModule } from '@nativescript/angular'
 
 import { TrendComponent } from './trend.component'
 
-const routes: Routes = [{ path: 'default', component: TrendComponent }]
+const routes: Routes = [{ path: '', component: TrendComponent }]
 
 @NgModule({
   imports: [NativeScriptRouterModule.forChild(routes)],
