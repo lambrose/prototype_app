@@ -1,0 +1,28 @@
+<FlexboxLayout class="page">
+    <StackLayout class="form">
+        <!-- <Image class="logo" src="~/images/logo.png"></Image> -->
+        <Label class="header" text="<LOGO>"></Label>
+        <Label class="header" text="Loop"></Label>
+
+        <StackLayout class="input-field">
+            <TextField #email class="input" hint="Email" keyboardType="email" autocorrect="false"
+                        autocapitalizationType="none" required>
+            </TextField>
+        </StackLayout>
+
+        <StackLayout class="input-field">
+            <TextField #password class="input" hint="Password" secure="true" required>
+            </TextField>
+        </StackLayout>
+
+        <Button text="Login" (tap)="onSubmit({email: email.text, password: password.text})"
+                class="btn btn-primary">
+        </Button>
+    </StackLayout>
+    <Label class="footer-label">
+        <FormattedString>
+            <Span [text]="isLoggingIn ? 'Don’t have an account? ' : 'Back to Login'"></Span>
+            <Span [text]="isLoggingIn ? 'Sign up' : ''" class="bold"></Span>
+        </FormattedString>
+    </Label>
+</FlexboxLayout>

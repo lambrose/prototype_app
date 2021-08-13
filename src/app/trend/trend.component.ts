@@ -10,7 +10,7 @@ export class TrendComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Use the "ngOnInit" handler to initialize data for the view.
+    // Use the 'ngOnInit' handler to initialize data for the view.
   }
 
   onLouis() {}

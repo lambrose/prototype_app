@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router';
 import { RouterExtensions } from '@nativescript/angular';
-import { Page } from "@nativescript/core";
+import { Page } from '@nativescript/core';
 
 @Component({
   selector: 'Tabs',
@@ -18,9 +18,9 @@ ngOnInit() {
     this.page.actionBarHidden = true;
     this.routerExtension.navigate([{
       outlets: {
-        trendTab: ["trend"],
-        homeTab: ["home"],
-        profileTab: ["profile"]
+        trendTab: ['trend'],
+        homeTab: ['home'],
+        profileTab: ['profile']
     } }], { relativeTo: this.activeRoute });
 }
 
