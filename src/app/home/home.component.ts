@@ -1,19 +1,45 @@
-import { Component, OnInit } from '@angular/core'
-
-import { DataService, DataItem } from '../shared/services/data.service'
+import { LocationService } from './../shared/services/location.service';
+import { Component, OnDestroy, OnInit } from '@angular/core'
+import { Subscription } from 'rxjs';
+import { ICoordinates } from '../shared/interfaces/location.interface';
 
 @Component({
   selector: 'Home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit {
-  items: Array<DataItem>
+export class HomeComponent implements OnInit, OnDestroy {
 
-  constructor(private _itemService: DataService) {}
+  public latitude: number;
+  public longitude: number;
+  private subscription: Subscription;
+
+  constructor(private locationService: LocationService) {}
 
   ngOnInit(): void {
-    this.items = this._itemService.getItems()
+    this.subscription = this.locationService.coordinates$.subscribe(
+      (coordinates: ICoordinates) => {
+        this.latitude = coordinates.latitude;
+        this.longitude = coordinates.longitude;
+      }
+    )
   }
 
   onLouis() {}
+
+  getLocation() {
+    this.locationService.getLocation();
+  }
+
+  startWatchingLocation() {
+    this.locationService.startWatchingLocation();
+  }
+
+  stopWatchingLocation() {
+    this.locationService.stopWatchingLocation();
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
 }

@@ -18,11 +18,11 @@
 </ActionBar>
 
 <GridLayout>
-  <ListView [items]="items">
-    <ng-template let-item="item">
-      <StackLayout [nsRouterLink]="['../item', item.id]">
-        <Label [text]="item.name"></Label>
-      </StackLayout>
-    </ng-template>
-  </ListView>
+  <StackLayout>
+      <Label text="Latitude: {{ latitude }}"></Label>
+      <Label text="Longitude: {{ longitude }}"></Label>
+      <Button class="btn btn-primary btn-active" text="Get Location" (tap)="getLocation()"></Button>
+      <Button class="btn btn-primary btn-active" text="Watch Location" (tap)="startWatchingLocation()"></Button>
+      <Button class="btn btn-primary btn-active" text="Stop Watching" (tap)="stopWatchingLocation()"></Button>
+  </StackLayout>
 </GridLayout>
