@@ -7,7 +7,7 @@ import { Page } from '@nativescript/core';
     selector: 'ns-login',
     moduleId: module.id,
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css']
+    styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
     isLoggingIn = true;

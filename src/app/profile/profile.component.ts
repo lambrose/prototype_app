@@ -1,17 +1,23 @@
+import { PostsService } from './services/posts-services';
 import { Component, OnInit } from '@angular/core'
+import { IPost } from '../shared/interfaces/post.interface';
 
 @Component({
   selector: 'Profile',
   templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  constructor() {
-    // Use the component constructor to inject providers....
-  }
+
+  public posts: Array<IPost>;
+
+  constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
-    // Use the 'ngOnInit' handler to initialize data for the view.
+    this.posts = this.postsService.getPosts();
   }
 
   onLouis() {}
+
+  onEdit() {}
 }

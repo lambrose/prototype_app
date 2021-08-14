@@ -1,123 +1,262 @@
+import { IPost } from '../interfaces/post.interface';
 import { Injectable } from '@angular/core'
-
-export interface DataItem {
-  id: number
-  name: string
-  description: string
-}
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  private items = new Array<DataItem>(
+  private posts = new Array<IPost>(
     {
       id: 1,
-      name: 'Item 1',
-      description: 'Description for Item 1',
+      date: new Date(),
+      username: 'louis',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 1'
+      }
     },
     {
       id: 2,
-      name: 'Item 2',
-      description: 'Description for Item 2',
+      date: new Date(),
+      username: 'louis',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 2'
+      }
     },
     {
       id: 3,
-      name: 'Item 3',
-      description: 'Description for Item 3',
+      date: new Date(),
+      username: 'louis',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 3'
+      }
     },
     {
       id: 4,
-      name: 'Item 4',
-      description: 'Description for Item 4',
+      date: new Date(),
+      username: 'louis',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 4'
+      }
     },
     {
       id: 5,
-      name: 'Item 5',
-      description: 'Description for Item 5',
+      date: new Date(),
+      username: 'louis',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 5'
+      }
     },
     {
       id: 6,
-      name: 'Item 6',
-      description: 'Description for Item 6',
+      date: new Date(),
+      username: 'Post 6',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 6'
+      }
     },
     {
       id: 7,
-      name: 'Item 7',
-      description: 'Description for Item 7',
+      date: new Date(),
+      username: 'Post 7',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 7'
+      }
     },
     {
       id: 8,
-      name: 'Item 8',
-      description: 'Description for Item 8',
+      date: new Date(),
+      username: 'Post 8',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 8'
+      }
     },
     {
       id: 9,
-      name: 'Item 9',
-      description: 'Description for Item 9',
+      date: new Date(),
+      username: 'Post 9',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 9'
+      }
     },
     {
       id: 10,
-      name: 'Item 10',
-      description: 'Description for Item 10',
+      date: new Date(),
+      username: 'Post 10',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 10'
+      }
     },
     {
       id: 11,
-      name: 'Item 11',
-      description: 'Description for Item 11',
+      date: new Date(),
+      username: 'Post 11',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 11'
+      }
     },
     {
       id: 12,
-      name: 'Item 12',
-      description: 'Description for Item 12',
+      date: new Date(),
+      username: 'Post 12',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 12'
+      }
     },
     {
       id: 13,
-      name: 'Item 13',
-      description: 'Description for Item 13',
+      date: new Date(),
+      username: 'Post 13',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 13'
+      }
     },
     {
       id: 14,
-      name: 'Item 14',
-      description: 'Description for Item 14',
+      date: new Date(),
+      username: 'Post 14',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 14'
+      }
     },
     {
       id: 15,
-      name: 'Item 15',
-      description: 'Description for Item 15',
+      date: new Date(),
+      username: 'Post 15',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 15'
+      },
     },
     {
       id: 16,
-      name: 'Item 16',
-      description: 'Description for Item 16',
+      date: new Date(),
+      username: 'Post 16',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 16'
+      }
     },
     {
       id: 17,
-      name: 'Item 17',
-      description: 'Description for Item 17',
+      date: new Date(),
+      username: 'Post 17',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 17'
+      }
     },
     {
       id: 18,
-      name: 'Item 18',
-      description: 'Description for Item 18',
+      date: new Date(),
+      username: 'Post 18',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 18'
+      }
     },
     {
       id: 19,
-      name: 'Item 19',
-      description: 'Description for Item 19',
+      date: new Date(),
+      username: 'Post 19',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 19'
+      }
     },
     {
       id: 20,
-      name: 'Item 20',
-      description: 'Description for Item 20',
+      date: new Date(),
+      username: 'louis',
+      location: {
+        longitude: 0,
+        latitude: 0
+      },
+      userContent: {
+        description: 'Description for Post 20'
+      }
     }
   )
 
-  getItems(): Array<DataItem> {
-    return this.items
+  getPosts(): Array<IPost> {
+    return this.posts
   }
 
-  getItem(id: number): DataItem {
-    return this.items.filter((item) => item.id === id)[0]
+  getPostByID(id: number): IPost {
+    return this.posts.filter((post) => post.id === id)[0];
+  }
+
+  getPostsByUsername(username: string): Array<IPost> {
+    return this.posts.filter((post) => post.username === username);
   }
 }
