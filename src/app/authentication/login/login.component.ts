@@ -1,7 +1,6 @@
 import { IUser } from '../../shared/interfaces/user.interface';
 import { Component } from '@angular/core';
 import { RouterExtensions } from '@nativescript/angular';
-import { Page } from '@nativescript/core';
 
 @Component({
     selector: 'ns-login',
@@ -13,8 +12,7 @@ export class LoginComponent {
     isLoggingIn = true;
     user: IUser;
 
-    constructor(private page: Page, private routerExtensions: RouterExtensions) {
-      this.page.actionBarHidden = true;
+    constructor(private routerExtensions: RouterExtensions) {
     }
 
     onSubmit(userCredentials: IUser) {

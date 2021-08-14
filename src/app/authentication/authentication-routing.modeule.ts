@@ -5,10 +5,9 @@ import { AuthenticationComponent } from './authentication.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', component: AuthenticationComponent, children: [
-    {path: '', component: LoginComponent}
-  ]
-}]
+  { path: '', component: AuthenticationComponent},
+  {path: 'login', component: LoginComponent}
+]
 
 @NgModule({
   imports: [NativeScriptRouterModule.forChild(routes)],

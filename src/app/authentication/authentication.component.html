@@ -1,3 +1,43 @@
-<GridLayout>
-    <page-router-outlet></page-router-outlet>
-</GridLayout>
+<StackLayout>
+    <FlexboxLayout class="auth-page" *ngIf="isLoggingIn; else isSigningUp">
+        <Label class="auth-title" text="Log in to Loop"></Label>
+        <Label class="auth-message" text="Stay connected, stay in the Loop"></Label>
+        <Button class="auth-button" text="Continue with us" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Apple" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Google" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Facebook" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Twitter" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Instagram" [nsRouterLink]="['login']"></Button>
+    </FlexboxLayout>
+    <GridLayout columns="*" rows="*, auto">
+        <StackLayout class="auth-footer" col="0" row="1">
+            <Label class="auth-footer-label" (tap)="onToggleAuthenticationType()">
+                <FormattedString>
+                    <Span [text]="isLoggingIn ? 'Don’t have an account? ' : 'Already have an account? '"></Span>
+                    <Span [text]="isLoggingIn ? 'Sign up' : 'Log in'" class="bold"></Span>
+                </FormattedString>
+            </Label>
+        </StackLayout>
+    </GridLayout>
+</StackLayout>
+
+<ng-template #isSigningUp>
+    <FlexboxLayout class="auth-page">
+        <Label class="auth-title" text="Sign up for Loop"></Label>
+        <Label class="auth-message" text="Stay connected, stay in the Loop"></Label>
+        <Button class="auth-button" text="Continue with us" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Apple" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Google" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Facebook" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Twitter" [nsRouterLink]="['login']"></Button>
+        <Button class="auth-button" text="Continue with Instagram" [nsRouterLink]="['login']"></Button>
+        <Label class="auth-policy" textWrap="true" textAlignment="center">
+            <FormattedString>
+              <span text="By clicking Sign Up, you agree to our Terms. Learn how we collect, use and share your data in our Data Policy and how we use cookies and similar technology in our Cookies Policy."></span>
+            </FormattedString>
+        </Label>
+    </FlexboxLayout>
+</ng-template>
+
+ <!-- <Button text="Button" [nsRouterLink]="['/main']" pageTransition="slide" clearHistory="true"></Button> -->
+
