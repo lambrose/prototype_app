@@ -1,9 +1,9 @@
-import { HomePostsService } from './services/posts.service';
 import { LocationService } from './../shared/services/location.service';
 import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Subscription } from 'rxjs';
 import { ICoordinates } from '../shared/interfaces/location.interface';
 import { IPost } from '../shared/interfaces/post.interface';
+import { PostsService } from '../shared/services/posts-services';
 
 @Component({
   selector: 'ns-app-home',
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public longitude: number;
   private subscription: Subscription;
 
-  constructor(private postservice: HomePostsService, private locationService: LocationService) {}
+  constructor(private postservice: PostsService, private locationService: LocationService) {}
 
   ngOnInit(): void {
     this.posts = this.postservice.getPosts();

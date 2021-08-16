@@ -1,4 +1,4 @@
-import { ProfilePostsService } from './services/posts-services';
+import { PostsService } from '../shared/services/posts-services';
 import { Component, OnInit } from '@angular/core'
 import { IPost } from '../shared/interfaces/post.interface';
 
@@ -11,10 +11,10 @@ export class ProfileComponent implements OnInit {
 
   public posts: Array<IPost>;
 
-  constructor(private postsService: ProfilePostsService) {}
+  constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
-    this.posts = this.postsService.getPosts();
+    this.posts = this.postsService.getPostsByUsername();
   }
 
   onLouis() {}
