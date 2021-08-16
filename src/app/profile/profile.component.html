@@ -22,7 +22,7 @@
       <StackLayout>
         <FlexboxLayout class="profile-data">
           <Image class="profile-avatar" src="/Users/louisambrose/Downloads/profilePic.jpeg"></Image>
-          <Label class="profile-username" text="username"></Label>
+          <Label class="profile-username" text="Louis"></Label>
           <Label class="profile-description" textWrap="true" textAlignment="center">
             <FormattedString>
               <span text="The following example creates a row of three items placed at the top of the screen. Items are placed in the order they were declared in."></span>
@@ -35,14 +35,9 @@
           <button text="Socials" (tap)="onLouis()"></button>
         </FlexboxLayout>
 
-          <StackLayout class="profile-posts">
-              <Label class="profile-post" *ngFor="let post of posts">
-                  <FormattedString>
-                    <!-- <span [text]="post.username"></span> -->
-                    <span [text]="post.userContent.description"></span>
-                  </FormattedString>
-              </Label>
-          </StackLayout>
+        <StackLayout>
+              <ns-app-post *ngFor="let post of posts" [post]="post"></ns-app-post>
+        </StackLayout>
       </StackLayout>
   </ScrollView>
 </StackLayout>

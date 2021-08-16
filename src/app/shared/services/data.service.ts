@@ -15,7 +15,7 @@ export class DataService {
         longitude: 0,
         latitude: 0
       },
-      loop: 'Chill',
+      loop: 'Tourism',
       userContent: {
         description: 'Description for Post 1. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.',
         imageUrl: "/Users/louisambrose/Downloads/sunset.jpeg"
@@ -48,10 +48,9 @@ export class DataService {
         longitude: 0,
         latitude: 0
       },
-      loop: 'Religion',
+      loop: 'Foodie',
       userContent: {
-        description: 'Description for Post 3. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.',
-        imageUrl: "/Users/louisambrose/Downloads/sunset.jpeg"
+        description: 'Description for Post 3. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
       },
       likes: 123,
       isLike: true,
@@ -108,222 +107,14 @@ export class DataService {
     {
       id: 7,
       date: new Date(),
-      username: 'Louis',
+      username: 'Joseph',
       location: {
         longitude: 0,
         latitude: 0
       },
-      loop: 'loop Tag',
+      loop: 'Business',
       userContent: {
         description: 'Description for Post 7. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 8,
-      date: new Date(),
-      username: 'Joseph',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 8. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 9,
-      date: new Date(),
-      username: 'Katrina',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 9. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 10,
-      date: new Date(),
-      username: 'Maria',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 10. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 11,
-      date: new Date(),
-      username: 'Theresa',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 11. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 12,
-      date: new Date(),
-      username: 'Louis',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 12. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 13,
-      date: new Date(),
-      username: 'Joseph',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 13. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 14,
-      date: new Date(),
-      username: 'Francis',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 14. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 15,
-      date: new Date(),
-      username: 'Jessica',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 15. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10,
-    },
-    {
-      id: 16,
-      date: new Date(),
-      username: 'Katrina',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 16. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 17,
-      date: new Date(),
-      username: 'Mercy',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 17. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 18,
-      date: new Date(),
-      username: 'Louis',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 18. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 19,
-      date: new Date(),
-      username: 'Francis',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 19. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
-      },
-      likes: 123,
-      isLike: true,
-      comments: 10
-    },
-    {
-      id: 20,
-      date: new Date(),
-      username: 'Itoro',
-      location: {
-        longitude: 0,
-        latitude: 0
-      },
-      loop: 'loop Tag',
-      userContent: {
-        description: 'Description for Post 20. On iOS the default text of the navigation button is the title of the previous page and the back button is used explicitly for navigation.'
       },
       likes: 123,
       isLike: true,
