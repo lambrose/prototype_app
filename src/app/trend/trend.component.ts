@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 
 @Component({
-  selector: 'Trend',
+  selector: 'ns-app-trend',
   templateUrl: './trend.component.html',
 })
 export class TrendComponent implements OnInit {

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { RouterExtensions } from '@nativescript/angular';
 
 @Component({
-    selector: 'ns-login',
+    selector: 'ns-app-login',
     moduleId: module.id,
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']

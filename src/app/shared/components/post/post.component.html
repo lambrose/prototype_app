@@ -1,0 +1,37 @@
+<FlexboxLayout class="post-container">
+    <GridLayout class="post-grid" rows="*, *, 2*, 3*, *" columns="80, *, 60">
+        <Image class="post-avatar" row="0" rowSpan="2" col="0" src="/Users/louisambrose/Downloads/profilePic.jpeg"></Image>
+        <Label class="post-username" row="0" col="1" [text]="post.username"></Label>
+        <Label class="post-time" row="0" col="2" [text]="'2Hrs Ago'"></Label>
+        <Label class="post-loop" row="1" col="1" [text]="post.loop"></Label>
+        <Label class="post-description" row="2" col="0" colSpan="3" textWrap="true" [text]="post.userContent.description"></Label>
+        <Image class="post-image" row="3" col="0" colSpan="3" *ngIf="post.userContent.imageUrl" [src]="post.userContent.imageUrl" stretch="aspectFill"></Image>
+        <Label class="post-like-button" row="4" col="0" (tap)="onLikePost()" text="{{post.likes}} Likes"></Label>
+        <Label class="post-comment-button" row="4" col="1" (tap)="onLikePost()" text="{{post.comments}} Comments"></Label>
+        <Label class="post-option-button" row="4" col="2" (tap)="onLikePost()" text="..."></Label>
+    </GridLayout>
+</FlexboxLayout>
+
+
+
+
+
+
+
+  <!-- <ListView [items]="posts" class="list-group">
+    <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+      <FlexboxLayout flexDirection="row" opacity="0.7">
+        <GridLayout rows="*, *, 2*, 3*, *" columns="100, *, 40" backgroundColor="rgba(255,255,255,0.2)" height="300" margin="2.5 15" padding="10 0" borderRadius="10">
+          <StackLayout row="0" rowSpan="2" col="0" backgroundColor="grey" height="80" width="80" verticalAlignment="center" horizontalAlignment="center" borderRadius="5"></StackLayout>
+          <StackLayout row="0" col="1" backgroundColor="yellow" height="14" width="40%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5"></StackLayout>
+          <StackLayout row="0" col="2" backgroundColor="black" height="14" width="20%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5"></StackLayout>
+          <StackLayout row="1" col="1" backgroundColor="blue" height="12" width="20%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5"></StackLayout>
+          <StackLayout row="2" col="0" colSpan="3" backgroundColor="red" height="40" width="90%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5"></StackLayout>
+          <StackLayout row="3" col="0" colSpan="3" backgroundColor="purple" height="40" width="90%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5"></StackLayout>
+          <StackLayout row="4" col="0" backgroundColor="pink" height="40" width="90%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5"></StackLayout>
+          <StackLayout row="4" col="1" backgroundColor="brown" height="40" width="90%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5"></StackLayout>
+          <StackLayout row="4" col="2" backgroundColor="orange" height="40" width="90%" verticalAlignment="center" horizontalAlignment="left" borderRadius="5"></StackLayout>
+        </GridLayout>
+      </FlexboxLayout>
+    </ng-template>
+  </ListView> -->

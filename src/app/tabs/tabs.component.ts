@@ -4,7 +4,7 @@ import { RouterExtensions } from '@nativescript/angular';
 import { Page } from '@nativescript/core';
 
 @Component({
-  selector: 'Tabs',
+  selector: 'ns-app-tabs',
   templateUrl: './tabs.component.html',
 })
 export class TabsComponent implements OnInit {

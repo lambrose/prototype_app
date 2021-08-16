@@ -1,7 +1,7 @@
 <ActionBar title="Prototype<Logo>">
   <ActionItem
     (tap)="onLouis()"
-    ios.systemIcon="9"
+    ios.systemIcon="12"
     ios.position="left"
     android.systemIcon="ic_menu_share"
     android.position="actionBar"
@@ -10,14 +10,14 @@
   <ActionItem
     text="delete"
     (tap)="onLouis()"
-    ios.systemIcon="16"
+    ios.systemIcon="7"
     ios.position="right"
     android.position="popup"
   >
   </ActionItem>
 </ActionBar>
 
-<GridLayout>
+<!-- <GridLayout>
   <StackLayout>
       <Label text="Latitude: {{ latitude }}"></Label>
       <Label text="Longitude: {{ longitude }}"></Label>
@@ -25,4 +25,12 @@
       <Button class="btn btn-primary btn-active" text="Watch Location" (tap)="startWatchingLocation()"></Button>
       <Button class="btn btn-primary btn-active" text="Stop Watching" (tap)="stopWatchingLocation()"></Button>
   </StackLayout>
-</GridLayout>
+</GridLayout> -->
+
+
+<!-- (itemTap)="onItemTap($event)" -->
+<ListView [items]="posts" class="list-group">
+  <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+    <ns-app-post [post]="item"></ns-app-post>
+  </ng-template>
+</ListView>

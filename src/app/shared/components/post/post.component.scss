@@ -1,0 +1,66 @@
+.post-container {
+    flex-direction: row;
+    align-items: center;
+}
+
+.post-grid{
+    height: auto;
+    margin: 15;
+}
+
+.post-avatar {
+    height: 60;
+    width: 60;
+    border-radius: 100;
+    border-color: #4db8ff;
+    border-width: 1;
+    // background-color: pink;
+}
+
+.post-username {
+    font-size: 17;
+    font-weight: 600;
+    // background-color: green;
+}
+
+.post-time {
+    font-size: 10;
+    font-weight: 300;
+    // background-color: yellow;
+}
+
+.post-loop {
+    font-size: 15;
+    font-weight: 500;
+    // background-color: brown;
+}
+
+.post-description {
+    font-size: 15;
+    font-weight: 400;
+    height: auto;
+    // background-color: blue;
+}
+
+.post-image {
+    width: 90%;
+    height: 200;
+    margin: 5;
+    // background-color: grey;
+}
+
+.post-like-button {
+    height: 15;
+    // background-color: red;
+}
+
+.post-comment-button {
+    height: 15;
+    // background-color: purple;
+}
+
+.post-option-button {
+    font-size: 17;
+    font-weight: 500;
+    // background-color: rgb(33, 150, 48);
+}

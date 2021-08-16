@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterExtensions } from '@nativescript/angular';
 
 @Component({
-  selector: 'Authentication',
+  selector: 'ns-app-authentication',
   templateUrl: './authentication.component.html',
   styleUrls: ['./authentication.component.scss']
 })

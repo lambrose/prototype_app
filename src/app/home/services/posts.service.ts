@@ -5,11 +5,11 @@ import { IPost } from '../../shared/interfaces/post.interface';
 @Injectable({
   providedIn: 'root',
 })
-export class ProfilePostsService {
+export class HomePostsService {
 
   public constructor(private dataService: DataService) {}
 
   getPosts(): Array<IPost> {
-    return this.dataService.getPostsByUsername('Louis');
+    return this.dataService.getPosts();
   }
 }
