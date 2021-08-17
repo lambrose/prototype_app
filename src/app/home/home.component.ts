@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(private postservice: PostsService, private locationService: LocationService) {}
 
   ngOnInit(): void {
+    this.locationService.getLocation();
     this.posts = this.postservice.getPosts();
     this.subscription = this.locationService.coordinates$.subscribe(
       (coordinates: ICoordinates) => {

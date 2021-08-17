@@ -1,13 +1,13 @@
-<TabView androidTabsPosition="bottom">
-  <GridLayout *tabItem="{ title: 'Trending' }">
+<TabView androidTabsPosition="bottom" class="tab-view">
+  <StackLayout *tabItem="{ title: 'Trending' }">
     <page-router-outlet name="trendTab"></page-router-outlet>
-  </GridLayout>
+  </StackLayout>
 
-  <GridLayout *tabItem="{ title: 'Home' }">
+  <StackLayout *tabItem="{ title: 'Home' }">
     <page-router-outlet name="homeTab"></page-router-outlet>
-  </GridLayout>
+  </StackLayout>
 
-  <GridLayout *tabItem="{ title: 'Profile' }">
+  <StackLayout *tabItem="{ title: 'Profile' }">
     <page-router-outlet name="profileTab"></page-router-outlet>
-  </GridLayout>
+  </StackLayout>
 </TabView>
