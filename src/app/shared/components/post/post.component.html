@@ -6,9 +6,9 @@
         <Label class="post-loop" row="1" col="1" [text]="post.loop"></Label>
         <Label class="post-description" row="2" col="0" colSpan="3" textWrap="true" [text]="post.userContent.description"></Label>
         <Image class="post-image" row="3" col="0" colSpan="3" *ngIf="post.userContent.imageUrl" [src]="post.userContent.imageUrl" stretch="aspectFill"></Image>
-        <Label class="post-like-button" row="4" col="0" (tap)="onLikePost()" text="{{post.likes}} Likes"></Label>
-        <Label class="post-comment-button" row="4" col="1" (tap)="onLikePost()" text="{{post.comments}} Comments"></Label>
-        <Label class="post-option-button" row="4" col="2" (tap)="onLikePost()" text="..."></Label>
+        <Label class="post-like-button fas" row="4" col="0" (tap)="onLikePost()" text="&#xf004; {{post.likes}}"></Label>
+        <Label class="post-comment-button fas" row="4" col="1" (tap)="onLikePost()" text="&#xf075; {{post.comments}}"></Label>
+        <Label class="post-option-button fas" row="4" col="2" (tap)="onLikePost()" text="&#xf141;"></Label>
     </GridLayout>
 </FlexboxLayout>
 
